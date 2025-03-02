@@ -1,0 +1,11 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#f1f7fe",
+    "titleBar.inactiveForeground": "#f1f7feCC",
+    "titleBar.activeBackground": "#fc7935",
+    "titleBar.inactiveBackground": "#fc7935CC"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
+}
