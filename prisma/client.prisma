@@ -1,5 +1,8 @@
 model Client {
-  id Int @id @default(autoincrement())
+  id                  Int     @id @default(autoincrement())
+  address             String
+  disclaimer_accepted Boolean
 
   // Foreign Key Relationships 
+  // account_id
 }
