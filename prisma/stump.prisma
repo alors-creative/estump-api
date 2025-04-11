@@ -1,5 +1,9 @@
 model Stump {
-  id Int @id @default(autoincrement())
+  id     Int @id @default(autoincrement())
+  width  Int
+  height Int
+  cost   Int
 
   // Foreign Key Relationships 
+  // stump_photos_id
 }
