@@ -1,5 +1,7 @@
 model Photo {
-  id Int @id @default(autoincrement())
+  id         Int    @id @default(autoincrement())
+  photo      String
+  photo_type String
 
   // Foreign Key Relationships 
 }
