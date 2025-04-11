@@ -1,0 +1,9 @@
+model StumpPhoto {
+  id         Int    @id @default(autoincrement())
+  machine    String //update to Photo later 
+  contractor String //update to Photo later 
+  truck      String //update to Photo later 
+
+  // Foreign Key Relationships 
+  // photo_id
+}
