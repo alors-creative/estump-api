@@ -1,5 +1,13 @@
 model Admin {
-  id Int @id @default(autoincrement())
+  id                    Int    @id @default(autoincrement())
+  total_revenue         Int
+  amount_of_jobs        Int
+  amount_of_contractors Int
+  active_states         String
+  active_cities         String
+  active_advertising    String
+  split_80_20           Int
 
   // Foreign Key Relationships 
+  // account_id
 }
