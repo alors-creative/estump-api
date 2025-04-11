@@ -1,5 +1,15 @@
 model Compliance {
-  id Int @id @default(autoincrement())
+  id     Int        @id @default(autoincrement())
+  status StatusType
 
   // Foreign Key Relationships 
+  // business_license_id
+  // proof_of_insurance_id
+}
+
+enum StatusType {
+  Approved
+  Pending
+  Denied
+  Expired
 }
