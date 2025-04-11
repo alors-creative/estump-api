@@ -1,5 +1,20 @@
 model Job {
-  id Int @id @default(autoincrement())
+  id               Int       @id @default(autoincrement())
+  total_cost       Int
+  job_status       JobStatus
+  away_status      Boolean
+  deposit_received Boolean
+  stump_quantity   Int
 
   // Foreign Key Relationships 
+  // contractor_id
+  // client_id
+  // stump_id
+  // review_id
+}
+
+enum JobStatus {
+  LookingForContractor
+  ContractorAccepted
+  Completed
 }
