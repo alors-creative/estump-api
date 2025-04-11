@@ -1,0 +1,5 @@
+model Job {
+  id Int @id @default(autoincrement())
+
+  // Foreign Key Relationships 
+}
