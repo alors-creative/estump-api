@@ -13,3 +13,23 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Foo {
+  id Int @id @default(autoincrement())
+}
+
+// File imports 
+// #import ./models/account.prisma
+// #import ./models/accountPassword.prisma
+// #import ./models/admin.prisma
+// #import ./models/businessLicense.prisma
+// #import ./models/client.prisma
+// #import ./models/comliance.prisma
+// #import ./models/contractor.prisma
+// #import ./models/job.prisma
+// #import ./models/photo.prisma
+// #import ./models/proofOfInsurance.prisma
+// #import ./models/review.prisma
+// #import ./models/stump.prisma
+// #import ./models/stumpPhoto.prisma
+// #import ./models/typeOfAccount.prisma
