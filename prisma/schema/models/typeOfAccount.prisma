@@ -1,11 +1,11 @@
 model TypeOfAccount {
   id              Int         @id @default(autoincrement())
-  type_of_account accountType
+  type_of_account AccountType
 
   // Foreign Key Relationships 
 }
 
-enum accountType {
+enum AccountType {
   Contractor
   Client
   Admin
