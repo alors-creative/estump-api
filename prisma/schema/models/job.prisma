@@ -7,10 +7,12 @@ model Job {
   stump_quantity   Int
 
   // Foreign Key Relationships 
-  // contractor_id
-  // client_id
-  // stump_id
-  // review_id
+  contractor_id Int
+  contractor    Contractor @relation(fields: [contractor_id], references: [id])
+  client_id     Int
+  client        Client     @relation(fields: [client_id], references: [id])
+  stumps        Stump[]
+  review        Review?
 }
 
 enum JobStatus {
