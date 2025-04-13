@@ -4,5 +4,6 @@ model Client {
   disclaimer_accepted Boolean
 
   // Foreign Key Relationships 
-  // account_id
+  account Account?
+  jobs    Job[]
 }
