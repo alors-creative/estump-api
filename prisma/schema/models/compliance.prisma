@@ -1,10 +1,14 @@
 model Compliance {
-  id     Int        @id @default(autoincrement())
-  status StatusType
+  id            Int          @id @default(autoincrement())
+  status        StatusType
+  document_type DocumentType
+  created_at    DateTime     @default(now())
+  updated_at    DateTime     @updatedAt
 
   // Foreign Key Relationships 
-  // business_license_id
-  // proof_of_insurance_id
+  photo         Photo?
+  contractor    Contractor? @relation(fields: [contractor_id], references: [id])
+  contractor_id Int?
 }
 
 enum StatusType {
@@ -12,4 +16,10 @@ enum StatusType {
   Pending
   Denied
   Expired
+}
+
+enum DocumentType {
+  ProofOfInsurance
+  BusinessLicense
+  ContractorProfile
 }
