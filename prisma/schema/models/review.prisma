@@ -4,5 +4,6 @@ model Review {
   review String
 
   // Foreign Key Relationships 
-  // account_id
+  job_id Int @unique
+  job    Job @relation(fields: [job_id], references: [id])
 }
