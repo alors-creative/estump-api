@@ -1,10 +1,24 @@
 model Account {
-  id           Int    @id @default(autoincrement())
+  id           Int         @id @default(autoincrement())
   first_name   String
   last_name    String
   phone_number String
-  email        String @unique
+  email        String      @unique
+  account_type AccountType
+  password     String
 
   // Foreign Key Relationships 
   // type_of_account_id
+  contractor_id Int?        @unique
+  contractor    Contractor? @relation(fields: [contractor_id], references: [id])
+  client_id     Int?        @unique
+  client        Client?     @relation(fields: [client_id], references: [id])
+  admin_id      Int?        @unique
+  admin         Admin?      @relation(fields: [admin_id], references: [id])
+}
+
+enum AccountType {
+  Contractor
+  Client
+  Admin
 }
