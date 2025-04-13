@@ -5,5 +5,7 @@ model Stump {
   cost   Int
 
   // Foreign Key Relationships 
-  // stump_photos_id
+  stump_photos StumpPhoto[]
+  job_id       Int
+  job          Job          @relation(fields: [job_id], references: [id])
 }
