@@ -1,8 +1,0 @@
-model BusinessLicense {
-  id                 Int      @id @default(autoincrement())
-  date_of_expiration DateTime
-
-  // Foreign Key Relationships 
-  // compliance_id
-  // photo_id
-}
