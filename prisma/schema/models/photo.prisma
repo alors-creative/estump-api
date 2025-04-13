@@ -1,7 +1,13 @@
 model Photo {
   id         Int    @id @default(autoincrement())
-  photo      String
+  url        String
   photo_type String
 
   // Foreign Key Relationships 
+  compliance_id     Int?            @unique
+  compliance        Compliance?     @relation(fields: [compliance_id], references: [id])
+  contractor_id     Int?            @unique
+  contractor        Contractor?     @relation(fields: [contractor_id], references: [id])
+  equipment_type_id Int?            @unique
+  equipment_photo   EquipmentPhoto? @relation(fields: [equipment_type_id], references: [id])
 }
