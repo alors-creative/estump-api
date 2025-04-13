@@ -1,0 +1,14 @@
+model EquipmentPhoto {
+  id             Int           @id @default(autoincrement())
+  equipment_type EquipmentType
+
+  // Foreign Key Relationships 
+  photo         Photo?
+  contractor_id Int?
+  contractor    Contractor? @relation(fields: [contractor_id], references: [id])
+}
+
+enum EquipmentType {
+  Machine
+  Truck
+}
