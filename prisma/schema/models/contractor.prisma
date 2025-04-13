@@ -3,9 +3,20 @@ model Contractor {
   business_name       String
   disclaimer_accepted Boolean
   revenue_earned      Int
+  status              Status
 
   // Foreign Key Relationships 
-  // account_id
-  // photo_id
-  // job_id
+  account          Account?
+  photo            Photo?
+  jobs             Job[]
+  compliance_docs  Compliance[]
+  equipment_photos EquipmentPhoto[]
+}
+
+enum Status {
+  Approved
+  Pending
+  Denied
+  Active
+  Inactive
 }
