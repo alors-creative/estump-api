@@ -1,9 +1,14 @@
 model StumpPhoto {
-  id         Int    @id @default(autoincrement())
-  machine    String //update to Photo later 
-  contractor String //update to Photo later 
-  truck      String //update to Photo later 
+  id         Int       @id @default(autoincrement())
+  url        String
+  photo_type PhotoType
 
   // Foreign Key Relationships 
-  // photo_id
+  stump_id Int
+  stump    Stump @relation(fields: [stump_id], references: [id])
+}
+
+enum PhotoType {
+  Top
+  Side
 }
