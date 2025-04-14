@@ -1,9 +1,7 @@
 import path from 'node:path';
 import type { PrismaConfig } from 'prisma';
 
-type Env = any;
-
 export default {
   earlyAccess: true,
-  schema: path.join('prisma', 'schema'),
-} satisfies PrismaConfig<Env>;
+  schema: path.resolve(__dirname), // points to the folder, not the file
+} satisfies PrismaConfig;
