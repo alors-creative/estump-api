@@ -1,7 +1,11 @@
 model Client {
   id                  Int     @id @default(autoincrement())
-  address             String
   disclaimer_accepted Boolean
+
+  streetAddress String
+  city          String
+  state         String
+  zipCode       String
 
   // Foreign Key Relationships 
   account Account?
